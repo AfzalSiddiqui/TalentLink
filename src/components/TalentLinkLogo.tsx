@@ -7,8 +7,8 @@ interface TalentLinkLogoProps {
 
 function TalentLinkLogo({ size = "medium", showTagline = true }: TalentLinkLogoProps) {
   const sizeMap = {
-    small: { logo: 32, icon: 16, fontSize: 20 },
-    medium: { logo: 48, icon: 20, fontSize: 32 },
+    small: { logo: 32, icon: 16,  fontSize: 20 },
+    medium: { logo: 48, icon: 20,  fontSize: 32 },
     large: { logo: 64, icon: 24, fontSize: 40 },
   };
 
