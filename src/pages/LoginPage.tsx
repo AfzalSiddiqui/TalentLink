@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import TalentLinkLogo from "../components/TalentLinkLogo";
 
 function LoginPage() {
@@ -7,6 +8,7 @@ function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -22,7 +24,8 @@ function LoginPage() {
       // TODO: Replace with your actual API call
       await new Promise((resolve) => setTimeout(resolve, 1000));
       console.log("Login successful");
-      // Redirect logic here
+      // Redirect to dashboard after successful login
+      navigate("/dashboard");
     } catch (err: any) {
       setError(err.message || "Login failed. Please try again.");
     } finally {
