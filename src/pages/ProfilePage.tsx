@@ -4,7 +4,7 @@ import HamburgerMenu from "../components/HamburgerMenu";
 import TalentLinkLogo from "../components/TalentLinkLogo";
 
 function ProfilePage() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] =  useState(false);
   const navigate = useNavigate();
 
   const toggleMenu = () => {
@@ -156,7 +156,7 @@ const styles: { [key: string]: React.CSSProperties } = {
     alignItems: "center",
     gap: 24,
     padding: 32,
-    backgroundColor: "#ffffff",
+    backgroundColor:  "#ffffff",
     borderRadius: 12,
     boxShadow: "0 1px 3px rgba(0, 0, 0, 0.1)",
     marginBottom: 24,
