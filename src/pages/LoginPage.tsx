@@ -27,7 +27,7 @@ function LoginPage() {
       // Redirect to dashboard after successful login
       navigate("/dashboard");
     } catch (err: any) {
-      setError(err.message || "Login has been failed. Please try again.");
+      setError(err.message || "Login has been failed.  Please try again.");
     } finally {
       setLoading(false);
     }
@@ -113,7 +113,7 @@ const styles: { [key: string]: React.CSSProperties } = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    background: "linear-gradient(135deg, #667eea 0%,  #764ba2 100%)",
     padding: 16,
   },
   card: {
