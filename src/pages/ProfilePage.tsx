@@ -4,7 +4,7 @@ import HamburgerMenu from "../components/HamburgerMenu";
 import TalentLinkLogo from "../components/TalentLinkLogo";
 
 function ProfilePage() {
-  const [isMenuOpen, setIsMenuOpen] =  useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
 
   const toggleMenu = () => {
