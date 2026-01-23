@@ -165,7 +165,7 @@ const styles: { [key: string]: React.CSSProperties } = {
     width: 100,
     height: 100,
     borderRadius: "50%",
-    background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    background: "linear-gradient(135deg,  #667eea 0%,  #764ba2 100%)",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
