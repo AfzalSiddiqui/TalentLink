@@ -7,7 +7,7 @@ function LoginPage() {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] =  useState<string | null>(null);
   const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -113,7 +113,7 @@ const styles: { [key: string]: React.CSSProperties } = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    background: "linear-gradient(135deg, #667eea 0%,  #764ba2 100%)",
+    background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
     padding: 16,
   },
   card: {
@@ -122,7 +122,7 @@ const styles: { [key: string]: React.CSSProperties } = {
     background: "#ffffff",
     borderRadius: 16,
     padding: "40px 32px",
-    boxShadow: "0 20px 60px rgba(0, 0, 0, 0.3)",
+    boxShadow: "0 20px 60px  rgba(0, 0, 0, 0.3)",
   },
   title: {
     fontSize: 28,
