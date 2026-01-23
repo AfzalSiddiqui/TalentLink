@@ -7,7 +7,7 @@ function LoginPage() {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] =  useState<string | null>(null);
   const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -15,7 +15,7 @@ function LoginPage() {
     setError(null);
 
     if (!email || !password) {
-      setError("Please enter both email and password.");
+      setError("Please enter both  email and password.");
       return;
     }
 
@@ -27,7 +27,7 @@ function LoginPage() {
       // Redirect to dashboard after successful login
       navigate("/dashboard");
     } catch (err: any) {
-      setError(err.message || "Login failed. Please try again.");
+      setError(err.message || "Login has been failed.  Please try again.");
     } finally {
       setLoading(false);
     }
@@ -122,7 +122,7 @@ const styles: { [key: string]: React.CSSProperties } = {
     background: "#ffffff",
     borderRadius: 16,
     padding: "40px 32px",
-    boxShadow: "0 20px 60px rgba(0, 0, 0, 0.3)",
+    boxShadow: "0 20px 60px  rgba(0, 0, 0, 0.3)",
   },
   title: {
     fontSize: 28,
