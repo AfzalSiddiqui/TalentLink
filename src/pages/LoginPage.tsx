@@ -15,7 +15,7 @@ function LoginPage() {
     setError(null);
 
     if (!email || !password) {
-      setError("Please enter both email and password.");
+      setError("Please enter both  email and password.");
       return;
     }
 
@@ -27,7 +27,7 @@ function LoginPage() {
       // Redirect to dashboard after successful login
       navigate("/dashboard");
     } catch (err: any) {
-      setError(err.message || "Login failed. Please try again.");
+      setError(err.message || "Login has been failed. Please try again.");
     } finally {
       setLoading(false);
     }
