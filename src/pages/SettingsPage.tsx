@@ -4,8 +4,8 @@ import HamburgerMenu from "../components/HamburgerMenu";
 import TalentLinkLogo from "../components/TalentLinkLogo";
 
 function SettingsPage() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [notificationsEnabled, setNotificationsEnabled] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] =  useState(false);
+  const [notificationsEnabled, setNotificationsEnabled] =  useState(true);
   const [darkModeEnabled, setDarkModeEnabled] = useState(false);
   const [locationEnabled, setLocationEnabled] = useState(true);
   const navigate = useNavigate();
