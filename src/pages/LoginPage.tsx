@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import TalentLinkLogo from "../components/TalentLinkLogo";
+import { login } from "../services/authService";
 
 function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [error, setError] =  useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
   const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -15,19 +16,16 @@ function LoginPage() {
     setError(null);
 
     if (!email || !password) {
-      setError("Please enter both  email and password.");
+      setError("Please enter both email and password.");
       return;
     }
 
     try {
       setLoading(true);
-      // TODO: Replace with your actual API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      console.log("Login successful");
-      // Redirect to dashboard after successful login
+      await login(email, password);
       navigate("/dashboard");
     } catch (err: any) {
-      setError(err.message || "Login has been failed.  Please try again.");
+      setError(err.message || "Login failed. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -37,7 +35,7 @@ function LoginPage() {
     <div style={styles.page}>
       <div style={styles.card}>
         <TalentLinkLogo />
-        
+
         <h2 style={styles.title}>Welcome Back</h2>
         <p style={styles.subtitle}>Sign in to continue to TalentLink</p>
 

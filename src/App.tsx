@@ -6,6 +6,7 @@ import ForgotPasswordPage from "./pages/ForgotPasswordPage";
 import DashboardPage from "./pages/DashboardPage";
 import ProfilePage from "./pages/ProfilePage";
 import SettingsPage from "./pages/SettingsPage";
+import AuthCallbackPage from "./pages/AuthCallbackPage";
 import FaceId from "./components/FaceId";
 
 function App() {
@@ -19,17 +20,18 @@ function App() {
         <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/settings" element={<SettingsPage />} />
-        <Route 
-          path="/face-id" 
+        <Route path="/auth/callback" element={<AuthCallbackPage />} />
+        <Route
+          path="/face-id"
           element={
-            <FaceId 
+            <FaceId
               onSuccess={() => {
                 console.log("Face ID authentication successful!");
                 window.location.href = "/login";
               }}
               onError={(error) => console.error("Face ID error:", error)}
             />
-          } 
+          }
         />
       </Routes>
     </Router>
